@@ -49,7 +49,7 @@ class Login:
             self.window,
             text="Don't have an account? Sign up",
             fg="#1da1f2",
-            bg="white",
+            bg="pink",
             cursor="hand2"
         )
         signup_label.pack()
