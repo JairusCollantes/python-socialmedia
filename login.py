@@ -6,14 +6,14 @@ class Login:
         self.window = tk.Tk()
         self.window.title("Login")
         self.window.geometry("350x450")
-        self.window.configure(bg="white")
+        self.window.configure(bg="pink")
         
 
         logo_label = tk.Label(
             self.window, 
             text="web", 
             font=("Arial", 40), 
-            bg="white"
+            bg="pink"
         )
         logo_label.pack(pady=20)
         
@@ -21,7 +21,7 @@ class Login:
             self.window,
             text="Sign in to web",
             font=("Arial", 18, "bold"),
-            bg="white"
+            bg="pink"
         )
         title_label.pack(pady=10)
         
