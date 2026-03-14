@@ -25,11 +25,11 @@ class Login:
         )
         title_label.pack(pady=10)
         
-        tk.Label(self.window, text="Username:", bg="white").pack(pady=(20,5))
+        tk.Label(self.window, text="Username:", bg="pink").pack(pady=(20,5))
         self.username_entry = tk.Entry(self.window, width=25)
         self.username_entry.pack()
         
-        tk.Label(self.window, text="Password:", bg="white").pack(pady=(15,5))
+        tk.Label(self.window, text="Password:", bg="pink").pack(pady=(15,5))
         self.password_entry = tk.Entry(self.window, width=25, show="*")
         self.password_entry.pack()
         
@@ -69,7 +69,7 @@ class Login:
     def show_signup(self):# Not functional , just a new window
         signup_window = tk.Toplevel(self.window)
         signup_window.title("Sign Up")
-        signup_window.geometry("350x500")
+        signup_window.geometry("350x450")
         
         tk.Label(signup_window, text="Create Account").pack(pady=20)
 
