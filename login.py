@@ -75,7 +75,7 @@ class Login:
             else:
                 messagebox.showerror("Error", "Invalid username or password")
     
-    def show_signup(self):# Not functional , just a new window
+    def show_signup(self):# Not functional , just a new window for now
         signup_window = tk.Toplevel(self.window)
         signup_window.title("Sign Up")
         signup_window.geometry("350x450")
