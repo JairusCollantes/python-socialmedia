@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import messagebox
+from database import DB
 
 class Login:
     def __init__(self):
@@ -7,6 +8,7 @@ class Login:
         self.window.title("Login")
         self.window.geometry("350x450")
         self.window.configure(bg="pink")
+        self.db = DB()
         
 
         logo_label = tk.Label(
@@ -60,11 +62,15 @@ class Login:
     def login(self): # Not functional , just check if theres an input
         username = self.username_entry.get()
         password = self.password_entry.get()
+        user = self.db.get_user(username, password)
         
         if not username or not password:
             messagebox.showerror("Error", "Please fill in all fields")
         else:
-            messagebox.showinfo("Success", f"Welcome {username}!")# Not functional , should open main window
+            if user:
+                messagebox.showinfo("Success", f"Welcome {username}!")# Not functional , should open main window
+            else:
+                messagebox.showerror("Error", "Invalid username or password")
     
     def show_signup(self):# Not functional , just a new window
         signup_window = tk.Toplevel(self.window)
