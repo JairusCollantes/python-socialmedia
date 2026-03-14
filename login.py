@@ -59,7 +59,7 @@ class Login:
         
         self.window.mainloop()
     
-    def login(self): # Not functional , just check if theres an input
+    def login(self):
         username = self.username_entry.get()
         password = self.password_entry.get()
         user = self.db.get_user(username, password)
@@ -68,7 +68,10 @@ class Login:
             messagebox.showerror("Error", "Please fill in all fields")
         else:
             if user:
-                messagebox.showinfo("Success", f"Welcome {username}!")# Not functional , should open main window
+                messagebox.showinfo("Success", f"Welcome {username}!")
+                self.window.destroy()
+                from main import main
+                main()
             else:
                 messagebox.showerror("Error", "Invalid username or password")
     
